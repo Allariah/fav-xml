@@ -122,7 +122,7 @@ $( "#export_selected" ).click(function() {
 	fav_contents += '<dp_mlist __type="bin" __size="80">';
 	var insertions = 0;
 	for (var each_dp_fav in dp_favs){
-		fav_contents += uint32_to_hex(sp_favs[each_dp_fav]);
+		fav_contents += uint32_to_hex(dp_favs[each_dp_fav]);
 		++insertions;
 	}
 	if (insertions > 20){
