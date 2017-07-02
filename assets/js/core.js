@@ -42,7 +42,7 @@ function uint8_to_hex(d) {
 
 function uint32_to_hex(d) {
     var s = (+d).toString(16);
-    if(s.length < 8) {
+    while (s.length < 8) {
         s = '0' + s;
     }
     var split = s.match(/../g);             // split number in groups of two
@@ -80,12 +80,12 @@ $( "#export_selected" ).click(function() {
 	console.log(dp_diff);
 
 	var fav_header = 
-	'<?xml version="1.0" encoding="UTF-8"?>' + 
-		'<IIDX23pc_favs>' + 
-    		'<favorite>';
+	'<?xml version="1.0" encoding="UTF-8"?>\n' + 
+		'<IIDX23pc_favs>\n\t' + 
+    		'<favorite>\n\t\t';
 
 	var fav_footer = 
-			'</favorite>' + 
+			'</favorite>\n' + 
 		'</IIDX23pc_favs>';
 
 	var fav_contents = "";
@@ -98,7 +98,7 @@ $( "#export_selected" ).click(function() {
 	for (var remaining = insertions; remaining < 20; remaining++){
 		fav_contents += "00000000";
 	}
-	fav_contents += '</sp_mlist>';
+	fav_contents += '</sp_mlist>\n\t\t';
 
 	fav_contents += '<sp_clist __type="bin" __size="20">';
 	var insertions = 0;
@@ -109,7 +109,7 @@ $( "#export_selected" ).click(function() {
 	for (var remaining = insertions; remaining < 20; remaining++){
 		fav_contents += "00";
 	}
-	fav_contents += '</sp_clist>';
+	fav_contents += '</sp_clist>\n\t\t';
 
 	fav_contents += '<dp_mlist __type="bin" __size="80">';
 	var insertions = 0;
@@ -120,7 +120,7 @@ $( "#export_selected" ).click(function() {
 	for (var remaining = insertions; remaining < 20; remaining++){
 		fav_contents += "00000000";
 	}
-	fav_contents += '</dp_mlist>';
+	fav_contents += '</dp_mlist>\n\t\t';
 
 	fav_contents += '<dp_clist __type="bin" __size="20">';
 	var insertions = 0;
@@ -131,7 +131,7 @@ $( "#export_selected" ).click(function() {
 	for (var remaining = insertions; remaining < 20; remaining++){
 		fav_contents += "00";
 	}
-	fav_contents += '</dp_clist>';
+	fav_contents += '</dp_clist>\n\t';
 
 	$("#xml_data").val(fav_header + fav_contents + fav_footer);
 });
