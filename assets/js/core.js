@@ -95,6 +95,10 @@ $( "#export_selected" ).click(function() {
 		fav_contents += uint32_to_hex(sp_favs[each_sp_fav]);
 		++insertions;
 	}
+	if (insertions > 20){
+		$("#xml_data").val("");
+		return;
+	}
 	for (var remaining = insertions; remaining < 20; remaining++){
 		fav_contents += "00000000";
 	}
@@ -105,6 +109,10 @@ $( "#export_selected" ).click(function() {
 	for (var each_sp_fav in sp_diff){
 		fav_contents += uint8_to_hex(sp_diff[each_sp_fav]);
 		++insertions;
+	}
+	if (insertions > 20){
+		$("#xml_data").val("");
+		return;
 	}
 	for (var remaining = insertions; remaining < 20; remaining++){
 		fav_contents += "00";
@@ -117,6 +125,10 @@ $( "#export_selected" ).click(function() {
 		fav_contents += uint32_to_hex(sp_favs[each_dp_fav]);
 		++insertions;
 	}
+	if (insertions > 20){
+		$("#xml_data").val("");
+		return;
+	}
 	for (var remaining = insertions; remaining < 20; remaining++){
 		fav_contents += "00000000";
 	}
@@ -127,6 +139,10 @@ $( "#export_selected" ).click(function() {
 	for (var each_dp_fav in dp_diff){
 		fav_contents += uint8_to_hex(dp_diff[each_dp_fav]);
 		++insertions;
+	}
+	if (insertions > 20){
+		$("#xml_data").val("");
+		return;
 	}
 	for (var remaining = insertions; remaining < 20; remaining++){
 		fav_contents += "00";
