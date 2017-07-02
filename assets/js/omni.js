@@ -1,4 +1,4 @@
-music_data = [{"id":1000, "name":"5.1.1.", "plain_name":"5.1.1.", "genre":"PIANO AMBIENT", "artist":"dj nagureo", "game":"0", "diff_N7":1, "diff_H7":6, "diff_A7":10, "diff_N14":1, "diff_H14":7, "diff_A14":10, "diff_b7":0},
+var music_data = [{"id":1000, "name":"5.1.1.", "plain_name":"5.1.1.", "genre":"PIANO AMBIENT", "artist":"dj nagureo", "game":"0", "diff_N7":1, "diff_H7":6, "diff_A7":10, "diff_N14":1, "diff_H14":7, "diff_A14":10, "diff_b7":0},
 {"id":1001, "name":"GRADIUSIC CYBER", "plain_name":"GRADIUSIC CYBER", "genre":"DIGI-ROCK", "artist":"TAKA", "game":"0", "diff_N7":5, "diff_H7":6, "diff_A7":7, "diff_N14":4, "diff_H14":9, "diff_A14":9, "diff_b7":0},
 {"id":1002, "name":"Prince on a star", "plain_name":"Prince on a star", "genre":"ALTERNATIVE ROCK", "artist":"SPIRITUAL RIDE", "game":"0", "diff_N7":4, "diff_H7":5, "diff_A7":6, "diff_N14":5, "diff_H14":8, "diff_A14":10, "diff_b7":0},
 {"id":1003, "name":"R3", "plain_name":"R3", "genre":"RAVE", "artist":"tiger YAMATO", "game":"0", "diff_N7":4, "diff_H7":5, "diff_A7":6, "diff_N14":4, "diff_H14":6, "diff_A14":8, "diff_b7":0},
