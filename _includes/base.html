@@ -1,3 +1,14 @@
+<br><br>
+<h2>Instructions</h2>
+Download the blank file <a href="/fav-xml/assets/iidx23-favs.xml" target="_blank">here</a><br><br>
+Select the songs you want (up to 20, if nothing happens, you selected too many)<br>
+Then at the bottom click on export and replace the <code>&lt;favorite&gt;</code> block<br><br>
+<h3>For Multiple banks:</h3>
+<div>
+Rename <code>&lt;favorite&gt;</code> to <code>&lt;extra_favorite folder_id="0"&gt;</code><br>
+as well as the closing tag
+</div><br>
+
 <table>
 	<thead>
 		<tr>
@@ -10,15 +21,6 @@
 </table>
 
 <button class="btn-dark" id="export_selected">Export</button>
-<button class="btn-dark" id="import_from">Import</button>
-<textarea rows="5" cols="64" wrap="soft" id="xml_data"></textarea>
-
-<br><br>
-<h2>Instructions</h2>
-Fill up Rivals with some rival ids (hit populate, copy out, hit randomize with an empty rivals list, add more using arcana)
-<h3>For Rival Type:</h3>
-<div>
-Use sp_profile_ids/dp_profile_ids for iidx<br>
-Use profile_ids for sdvx
-</div>
+<!--<button class="btn-dark" id="import_from">Import</button>-->
+<textarea rows="10" cols="80" style="white-space: nowrap; overflow-x: auto;" id="xml_data"></textarea>
 <script src="{{ '/assets/js/core.js?v=' | append: site.github.build_revision | relative_url }}" type="text/javascript"></script>
