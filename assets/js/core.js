@@ -1,7 +1,9 @@
 $( "#songs" ).empty();
 $( "#favs" ).empty();
 
-for (var entry in music_data) {
+for (var i in music_data) {
+	var entry = music_data[i];
+
 	$( "#songs" ).append("<div class=\"song\" num_id=" + entry.id + ">" + entry.name + "</div>");
 	var this_fav = $( "#favs" ).append("<div class=\"favs_entry\" num_id=" + entry.id + "></div>");
 
