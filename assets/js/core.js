@@ -133,7 +133,7 @@ $( "#export_selected" ).click(function() {
 	}
 	fav_contents += '</dp_clist>';
 
-	$(".xml_data").val(fav_header + fav_contents + fav_footer);
+	$("#xml_data").val(fav_header + fav_contents + fav_footer);
 });
 
 $( "#import_from" ).click(function() {
