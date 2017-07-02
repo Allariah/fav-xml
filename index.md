@@ -1,2 +1,2 @@
-{% include base.html %}
 {% include copula.html %}
+{% include base.html %}
