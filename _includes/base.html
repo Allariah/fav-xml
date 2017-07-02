@@ -1,10 +1,14 @@
-<button class="btn-dark" id="submit_token">Save</button><br>
-Test:<br>
-<input type="text" size="20" name="game_name" value="iidx"> <input type="text" size="7" name="game_ver" value="23">
-<button class="btn-dark" id="submit_game_ver">Save</button><br>
-Rival Type:<br>
-<input type="text" size="30" name="rival_type" value="sp_profile_ids">
-<button class="btn-dark" id="submit_rival_type">Save</button><br>
+<table>
+<thead>
+<tr>
+<th>Song</th>
+<th>Fav Settings</th>
+</tr>
+</thead>
+<tbody id="songs_table">
+</tbody>
+</table>
+
 <div class="clearfix" style="width:100%;">
   <div id="col1" style="float:left; margin:0; width:75%;">
     <div>Currently Selected Rivals:</div>
@@ -15,9 +19,10 @@ Rival Type:<br>
     <div id="favs"></div>
   </div>
 </div>
-<button class="btn-dark" id="populate_selected">Export</button>
-<button class="btn-dark" id="randomize_selected">Import</button>
-<textarea readonly="" rows="5" cols="13" wrap="soft" style="overflow:hidden; resize: none; white-space: pre;" id="selected_rivals"></textarea>
+
+<button class="btn-dark" id="export_selected">Export</button>
+<button class="btn-dark" id="import_from">Import</button>
+<textarea rows="5" cols="64" wrap="soft" id="xml_data"></textarea>
 
 <br><br>
 <h2>Instructions</h2>
