@@ -13,15 +13,17 @@ for (var i in music_data) {
 	var diffs_7 = ["diff_N7", "diff_H7", "diff_A7"];
 	var diffs_14 = ["diff_N14", "diff_H14", "diff_A14"];
 
-	for (var each_diff in diffs_7){
+	for (var diff_i in diffs_7){
+		var each_diff = diffs_7[diff_i];
 		if (entry[each_diff] > 0){
 			this_fav.append("<input type=\"checkbox\" name=\"" + each_diff + "\">");
 		}else{
 			this_fav.append("<input type=\"checkbox\" name=\"" + each_diff + "\" disabled>");
 		}
 	}
-	this_fav.append("<div id=\"space\"> </div>");
-	for (var each_diff in diffs_14){
+	this_fav.append(" ");
+	for (var diff_i in diffs_14){
+		var each_diff = diffs_14[diff_i];
 		if (entry[each_diff] > 0){
 			this_fav.append("<input type=\"checkbox\" name=\"" + each_diff + "\">");
 		}else{
